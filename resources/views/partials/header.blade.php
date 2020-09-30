@@ -11,11 +11,11 @@
                     <div class="navbar-profile">
                         <div class="dropdown">
                             <a href="#" class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                John Doe
+                            {{\Auth::user()->name}}
                             </a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <a class="dropdown-item" href="{{route('user.profile')}}">My Profile</a>
-                                <a class="dropdown-item" href="">Change Password</a>
+                                <a class="dropdown-item" href="{{route('password.index')}}">Change Password</a>
                                 <a class="dropdown-item" href="{{route('logout')}}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}</a>

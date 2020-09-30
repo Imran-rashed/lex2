@@ -22,7 +22,7 @@
                                         <div class="card mb-3">
                                             <div class="row no-gutters">
                                                 <div class="col-md-4">
-                                                    <img src="{{asset('/assets/img/profile.jpg')}}" class="card-img" alt="..." style="padding: 0.8rem">
+                                                    <img src="{{asset(Storage::url('app/public/avatars/'.$user->image))}}" class="card-img" alt="..." style="padding: 0.8rem">
                                                 </div>
                                                 <div class="col-md-8">
                                                     <div class="card-body">

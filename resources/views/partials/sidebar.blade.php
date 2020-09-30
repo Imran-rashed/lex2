@@ -39,12 +39,16 @@
                         <span>Advanced Search</span>
                     </a>
                 </li>
-                <li>
+
+                @if(\Auth::user()->role_id == 1)
+                    <li>
                     <a href="{{route('user.index')}}">
                         <i class="material-icons md-24">apps</i>
                         <span>Users</span>
                     </a>
                 </li>
+                @endif
+
             </ul>
         </div>
         <!-- sidebar-menu  -->

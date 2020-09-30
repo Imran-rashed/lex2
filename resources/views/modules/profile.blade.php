@@ -45,17 +45,13 @@
                                                             {{$errors->has('email') ? $errors->first('email') :'' }}
                                                         </span>
 
-                                                        @if ($user->role_id==1)
-                                                        {!! Form::select('role_id',\App\Util::getUserRole(),
-                                                            array('id' => 'role_id'),['placeholder'=>'Select One',
-                                                            ])
-                                                            !!}
-                @else
-                {!! Form::text('role_id',old('role_id',isset($user->role_id)
-                                                        ?$user->role_id:''),['class' => '','disabled'=>'disabled']); !!}
-
-                                                     
- @endif
+                                        @if ($user->role_id==1)
+                                            {!! Form::select('role_id',\App\Util::getUserRole(),old('role_id',isset($user->role_id)
+                                            ?$user->role_id:''),array('id' => 'role_id'),['placeholder'=>'Select One',
+                                            ])!!}
+                                        @else
+                                        {!! Form::text(null,\App\Util::getUserRole($user->role_id),['readonly'=>true]); !!}
+                                        @endif
 
 
 

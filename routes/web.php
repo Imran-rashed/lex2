@@ -31,7 +31,7 @@ Route::get('/key-generate', function() {
 
 Route::get('/', function () {
    // return view('welcome');
-    return redirect()->route('dashboard');
+    return redirect()->route('context.index');
 });
 
 Auth::routes();
@@ -42,7 +42,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['middleware'=>'auth'], function(){
 
     	// Dashboard
-	Route::get('dashboard', 'DashboardController@index')->name('dashboard');
+//	Route::get('dashboard', 'DashboardController@index')->name('dashboard');
         //Context
     Route::get('contextlist', 'ContextController@index')->name('context.index');
     Route::get('context/create', 'ContextController@create')->name('context.create');
@@ -54,12 +54,21 @@ Route::group(['middleware'=>'auth'], function(){
     Route::get('term/create', 'TermController@create')->name('term.create');
         //Search
     Route::get('advancedsearch', 'AdvnacedSearchController@index')->name('advancedsearch.index');
-        //Term
-    Route::get('users', 'UserController@index')->name('user.index');
-    Route::post('user/create', 'UserController@store')->name('user.create');
+
     //Profile
     Route::get('profile', 'UserProfile@edit')->name('user.profile');
     Route::post('profile/save', 'UserProfile@update')->name('user.profileUpdate');
+    //Password
+    Route::get('changePassword', 'PasswordController@index')->name('password.index');
+    Route::post('changePassword/update', 'PasswordController@change')->name('password.change');
+
+
+    Route::group(['middleware' => 'admin'], function () {
+            //Term
+    Route::get('users', 'UserController@index')->name('user.index');
+    Route::post('user/create', 'UserController@store')->name('user.create');
+    });
+
 
 });
 
