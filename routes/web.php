@@ -60,7 +60,7 @@ Route::group(['middleware'=>'auth'], function(){
     Route::post('profile/save', 'UserProfile@update')->name('user.profileUpdate');
     //Password
     Route::get('changePassword', 'PasswordController@index')->name('password.index');
-    Route::post('changePassword/update', 'PasswordController@change')->name('password.change');
+    Route::post('changePassword/update', 'PasswordController@store')->name('password.change');
 
 
     Route::group(['middleware' => 'admin'], function () {

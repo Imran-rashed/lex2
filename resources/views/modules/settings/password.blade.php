@@ -19,6 +19,12 @@
                                 <div class="password-field">
                                 {!! Form::open(['url' => '/changePassword/update','action' => 'POST']) !!}
                                   @csrf   
+                                  @foreach ($errors->all() as $error)
+
+<p class="text-danger">{{ $error }}</p>
+
+@endforeach 
+
                                   {{Form::hidden('id',\Auth::user()->id)}}                       
                                   {{Form::password('oldpassword', array('id' => 'oldpassword','placeholder' => 'Old Password'))}}                       
                                   {{Form::password('newpassword', array('id' => 'newpassword','placeholder' => 'New password'))}}                       
