@@ -41,21 +41,16 @@ class PasswordController extends Controller
     {
         $request->validate([
 
-            'current_password' => ['required', new MatchOldPassword],
+            'oldpassword' => ['required', new MatchOldPassword],
 
-            'new_password' => ['required'],
+            'newpassword' => ['required'],
 
-            'new_confirm_password' => ['same:new_password'],
 
         ]);
 
-   
+        User::find(auth()->user()->id)->update(['password'=> Hash::make($request->newpassword)]);
 
-        User::find(auth()->user()->id)->update(['password'=> Hash::make($request->new_password)]);
-
-   
-
-        dd('Password change successfully.');
+        return redirect()->route('password.index')->with('message', 'Password changed successfully');
     }
 
     /**
