@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
+use App\Mail\SignupEmail;
 
 use App\User;
 
@@ -45,13 +46,22 @@ class UserController extends Controller
             'role_id' => 'required',
             'email' => 'required'
             ]);
-        $randpass= Str::random(40);;
+        $randpass= Str::random(8);;
 
         $user = new USER();
         $user->name = $request->name;
         $user->email = $request->email;
         $user->password = bcrypt($randpass);
         $user->role_id= $request->role_id;
+    
+        $details = [
+            'title' => 'Mail from Lexenter',
+            'body' => 'Hi '.$request->name.'!
+            Thanks for registering at Lexenter. You can now login to manage your account using the following credentials:
+            Email:'.$request->email.'
+            Password: '.$randpass];    
+    
+        \Mail::to($request->email)->send(new SignupEmail($details));
         $user->save();
         return redirect()->route('user.index');
     }
