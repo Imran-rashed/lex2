@@ -24,7 +24,7 @@
                                 </form>
                             </div>
                         </div>
-                        <img class="profile-pic" src="{{asset('assets/img/profile.jpg')}}" alt="profile pic">
+                        <img class="profile-pic" src="{{asset(Storage::url('app/public/avatars/'.\Auth::user()->image))}}" alt="profile pic">
                     </div>
                 </div>
             </div>

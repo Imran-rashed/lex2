@@ -45,12 +45,17 @@ input:focus, textarea:focus, select:focus{
     padding: 0.4rem 0 0.4rem 1rem;
     border-radius: 0;
     box-shadow: none;
+    margin-top: 1rem;
 }
 .bootstrap-tagsinput .badge {
+    padding: 4px 5px;
     margin: 0 5px;
 }
 .bootstrap-tagsinput .badge-info {
     background-color: #3b86ff;
+}
+.badge {
+    font-size: 65%;
 }
 .card {
     border: 0;
@@ -441,23 +446,16 @@ tbody tr td, tbody tr td a {
 .create-context .english-context {
     margin-right: 1.5rem;
 }
-.english-context .first-row, .english-context .second-row, .english-context .third-row,
-.chinese-context .first-row, .chinese-context .second-row, .chinese-context .third-row {
+.english-context .first-row, .english-context .second-row,
+.chinese-context .first-row, .chinese-context .second-row {
     margin-bottom: 1rem;
 }
 .english-context .first-row input, .chinese-context .first-row input {
-    display: inline-block;
-    width: 48.55%;
-    margin-right: 0.5rem;
-    border: 1px solid rgb(230, 230, 230);
-    padding: 0.4rem 0 0.4rem 1rem;
-}
-.english-context .second-row input, .chinese-context .second-row input {
     width: 100%;
     border: 1px solid rgb(230, 230, 230);
     padding: 0.4rem 0 0.4rem 1rem;
 }
-.english-context .third-row input, .chinese-context .third-row input, .note {
+.english-context .second-row input, .chinese-context .second-row input, .note {
     width: 100%;
     border: 1px solid rgb(230, 230, 230);
     padding: 0.4rem 0 0.4rem 1rem;
@@ -473,19 +471,6 @@ tbody tr td, tbody tr td a {
     color: rgb(77, 79, 92);
     line-height: 1.2;
 }
-.english-context a, .chinese-context a {
-    display: inline-flex;
-    font-size: 13px;
-    color: rgb(59, 134, 255);
-    line-height: 1.2;
-    margin-top: 0.7rem;
-}
-.english-context a .material-icons, .chinese-context a .material-icons {
-    font-size: 15px;
-    color: rgb(164, 175, 183);
-    line-height: 1.2;
-    margin-right: 0.5rem;
-}
 .tox-tinymce {
     border: 1px solid rgb(230, 230, 230);
 }
@@ -500,6 +485,9 @@ tbody tr td, tbody tr td a {
     background-color: #3b86ff;
     border: 0;
     border-radius: 4px;
+}
+.dropdown .dropdown-menu a {
+    display: flex;
 }
 
 /*----------- Article -----------*/
@@ -669,4 +657,27 @@ tbody tr td, tbody tr td a {
 /*--------- Full article ---------*/
 .article-title {
     margin-bottom: 1.5rem;
+}
+
+/*----------- Term Add -----------*/
+.term-add button {
+    text-transform: uppercase;
+    padding: 0.3rem 1.5rem;
+    margin-top: 0.8rem;
+    color: #fff;
+    background-color: #3b86ff;
+    border: 0;
+    border-radius: 4px;
+}
+.create-context a {
+    display: block;
+    font-size: 13px;
+    color: rgb(59, 134, 255);
+    line-height: 1.2;
+    margin-top: 0.7rem;
+    text-align: center;
+}
+span.term-group {
+    color: #333;
+    font-weight: 500;
 }

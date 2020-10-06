@@ -6,7 +6,7 @@
 
     @include("partials.sidebar")
     @include("partials.header")
-        <main class="page-content">
+    <main class="page-content">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12">
@@ -14,7 +14,7 @@
                     		<h1>articles</h1>
                     	</div>
                     	<div class="main-content article-list">
-                            <a href="{{route('article.create')}}" class="new-article-btn"><span class="material-icons">post_add</span>Create New Article</a>
+                            <a href="add-article.php" class="new-article-btn"><span class="material-icons">post_add</span>Create New Article</a>
                     		<table id="article-list" class="table" style="width:100%">
                                 <thead>
                                     <tr>
@@ -82,4 +82,5 @@
             </div>
         </main>
       <!-- page-content" -->
+      
 @endsection

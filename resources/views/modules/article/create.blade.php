@@ -17,7 +17,6 @@
                             <div class="english-article">
                                 <h5>English</h5>
                                 <div class="first-row">
-                                    <input type="text" value="100000019" readonly="">
                                     <input type="text" placeholder="Article title">
                                     <input type="text" placeholder="Source">
                                 </div>
@@ -28,7 +27,6 @@
                             <div class="chinese-article">
                                 <h5>China</h5>
                                 <div class="first-row">
-                                    <input type="text" value="100000019" readonly="">
                                     <input type="text" placeholder="Article title">
                                     <input type="text" placeholder="Source">
                                 </div>
@@ -46,5 +44,6 @@
             </div>
         </main>
       <!-- page-content" -->
+      
       
 @endsection

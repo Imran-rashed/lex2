@@ -5,7 +5,7 @@
                 <div class="row">
                     <div class="col-12">
                     	<div class="page-title">
-                    		<h1>add new context</h1>
+                    		<h1>add new term</h1>
                     	</div>
                         <div class="main-content create-context">
                             <div class="english-context">
@@ -25,12 +25,13 @@
 
                                 <textarea id="eng-context-area">  
                                 </textarea>
+
                                 <select multiple data-role="tagsinput" class="term-input">
                                     <option value="jQuery">jQuery</option>
                                     <option value="Angular">Angular</option>
                                     <option value="React">React</option>
                                     <option value="Vue">Vue</option>
-                                </select>
+                                </select> 
                                 
                             </div>
                             <div class="chinese-context">
@@ -50,6 +51,7 @@
 
                                 <textarea id="chi-context-area"> 
                                 </textarea>
+
                                 <select multiple data-role="tagsinput" class="term-input">
                                     <option value="jQuery">jQuery</option>
                                     <option value="Angular">Angular</option>
@@ -58,6 +60,7 @@
                                 </select>
                                 
                             </div>
+                            <a href="#"><span class="material-icons"> add_box</span> Add One More Term</a>
                             <hr>
                             <div style="width:100%; text-align: center;">
                                 <button type="submit">submit</button>

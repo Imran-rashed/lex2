@@ -28,6 +28,7 @@
 					<input type="text" name="username" placeholder="Email">
 					<span class="lock-icon"><i class="material-icons md-18">lock</i></span>
 					<input type="password" name="password" placeholder="Password">
+					<input type="hidden" name="_token" value="ds0wWUKvfGqz78AV543kC4Cgtk3zuHgW0LBQDSJB">
 					<button type="submit">Login</button>
 					<a href="forgot-password.php">Forgot your password?</a>
 				</form>

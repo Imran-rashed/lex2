@@ -6,7 +6,6 @@
 
     @include("partials.sidebar")
     @include("partials.header")
-
     <main class="page-content">
             <div class="container-fluid">
                 <div class="row">
@@ -18,13 +17,9 @@
                             <div class="english-context">
                                 <h5>English</h5>
                                 <div class="first-row">
-                                    <input type="text" value="1000000190002" readonly="">
-                                    <input type="text" placeholder="Context Order" style="margin-right: 0">
-                                </div>
-                                <div class="second-row">
                                     <input type="text" placeholder="Source">
                                 </div>
-                                <div class="third-row">
+                                <div class="second-row">
                                     <select id='article-title-eng'>
                                         <option></option>
                                        <option value='1'>Facing Fees, Some Sites Are Bypassing Google Maps</option>
@@ -43,18 +38,13 @@
                                     <option value="Vue">Vue</option>
                                 </select>
                                 
-                                <a href="#"><span class="material-icons"> add_box</span> Add Block</a>
                             </div>
                             <div class="chinese-context">
                                 <h5>China</h5>
                                 <div class="first-row">
-                                    <input type="text" value="1000000190002" readonly="">
-                                    <input type="text" placeholder="Context Order" style="margin-right: 0">
-                                </div>
-                                <div class="second-row">
                                     <input type="text" placeholder="Source">
                                 </div>
-                                <div class="third-row">
+                                <div class="second-row">
                                     <select id='article-title-chi'>
                                         <option></option>
                                        <option value='1'>收费吓退谷歌地图用户</option>
@@ -73,7 +63,6 @@
                                     <option value="Vue">Vue</option>
                                 </select>
                                 
-                                <a href="#"><span class="material-icons"> add_box</span> Add Block</a>
                             </div>
                             <hr>
                             <div style="width:100%; text-align: center;">
