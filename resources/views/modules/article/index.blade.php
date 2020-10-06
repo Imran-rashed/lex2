@@ -14,7 +14,7 @@
                     		<h1>articles</h1>
                     	</div>
                     	<div class="main-content article-list">
-                            <a href="add-article.php" class="new-article-btn"><span class="material-icons">post_add</span>Create New Article</a>
+                            <a href="{{route('article.create')}}" class="new-article-btn"><span class="material-icons">post_add</span>Create New Article</a>
                     		<table id="article-list" class="table" style="width:100%">
                                 <thead>
                                     <tr>

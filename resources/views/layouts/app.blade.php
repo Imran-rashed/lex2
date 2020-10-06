@@ -9,8 +9,7 @@
 
 <title>@yield("title")</title>
 
-<!-- Scripts -->
-<script src="{{ asset('js/app.js') }}" defer></script>
+
 
 <!-- Fonts -->
 <!-- <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -38,6 +37,8 @@
   </div>
 
 <!-- page-wrapper -->
+<!-- Scripts -->
+<script src="{{ asset('js/app.js') }}" defer></script>
 <script src="{{asset('assets/js/jquery-3.4.1.min.js')}}"></script>
 <script src="{{asset('assets/js/popper.js')}}"></script>
 <script src="{{asset('assets/js/bootstrap.js')}}"></script>
@@ -45,8 +46,9 @@
 <script src="{{asset('assets/js/dataTables.bootstrap4.min.js')}}"></script>
 <script src="{{asset('assets/js/select2.min.js')}}"></script>
 <script src="{{asset('assets/js/tagsinput.js')}}"></script>
-<script src="{{asset('assets/js/script.js')}}"></script>
+
 <script src="https://cdn.tiny.cloud/1/qagffr3pkuv17a8on1afax661irst1hbr4e6tbv888sz91jc/tinymce/5.4.2-90/tinymce.min.js"></script>
+<script src="{{asset('assets/js/script.js')}}"></script>
 @stack('script')
 </body>
 </html>

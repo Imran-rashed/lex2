@@ -49,6 +49,9 @@ Route::group(['middleware'=>'auth'], function(){
         //Article
     Route::get('articlelist', 'ArticleController@index')->name('article.index');
     Route::get('article/create', 'ArticleController@create')->name('article.create');
+    Route::post('article/save', 'ArticleController@store')->name('article.store');
+    
+
         //Term
     Route::get('termlist', 'TermController@index')->name('term.index');
     Route::get('term/create', 'TermController@create')->name('term.create');
