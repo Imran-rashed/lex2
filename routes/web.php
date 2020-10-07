@@ -48,6 +48,7 @@ Route::group(['middleware'=>'auth'], function(){
     Route::get('context/create', 'ContextController@create')->name('context.create');
         //Article
     Route::get('articlelist', 'ArticleController@index')->name('article.index');
+    //Route::get('article/{id}', 'ArticleController@single');
     Route::get('article/create', 'ArticleController@create')->name('article.create');
     Route::post('article/save', 'ArticleController@store')->name('article.store');
     

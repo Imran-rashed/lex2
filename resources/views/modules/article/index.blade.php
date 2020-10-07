@@ -26,54 +26,24 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                             @foreach($articles as $article)
                                     <tr>
                                         <td>
-                                            <a href="full-article.php">0000001</a><br>
-                                            <a href="full-article.php">Google Sees the Promise in</a>
+                                            <a href="full-article.php">{{$article->article_code}}</a><br>
+                                            <a href="full-article.php">{{$article->title_en}}</a>
                                         </td>
-                                        <td>Google Sees the Promise in</td>
-                                        <td>谷歌转型 软硬兼施谷歌转型 软硬兼施</td>
+                                        <td>{{$article->title_en}}</td>
+                                        <td>{{$article->title_cn}}</td>
                                         <td>
-                                        	<a href="#">https://cn.nytimes.com/</a></br>
-                                        	<a href="#">https://cn.nytimes.com/</a>
+                                        	<a href="#">{{$article->source_en}}</a></br>
+                                        	<a href="#">{{$article->source_cn}}</a>
                                         </td>
                                         <td>
                                         	<a href="#"><i class="material-icons">close</i></a>
                                             <a href="#"><span class="material-icons">create</span></a>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>
-                                            <a href="full-article.php">0000001</a><br>
-                                            <a href="full-article.php">Google Sees the Promise in</a>
-                                        </td>
-                                        <td>Google Sees the Promise in</td>
-                                        <td>谷歌转型 软硬兼施 谷歌转型 软硬兼施</td>
-                                        <td>
-                                            <a href="#">https://cn.nytimes.com/</a></br>
-                                            <a href="#">https://cn.nytimes.com/</a>
-                                        </td>
-                                        <td>
-                                            <a href="#"><i class="material-icons">close</i></a>
-                                            <a href="#"><span class="material-icons">create</span></a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <a href="full-article.php">0000001</a><br>
-                                            <a href="full-article.php">Google Sees the Promise in</a>
-                                        </td>
-                                        <td>Google Sees the Promise in</td>
-                                        <td>谷歌转型 软硬兼施谷歌转型 软硬兼施</td>
-                                        <td>
-                                            <a href="#">https://cn.nytimes.com/</a></br>
-                                            <a href="#">https://cn.nytimes.com/</a>
-                                        </td>
-                                        <td>
-                                            <a href="#"><i class="material-icons">close</i></a>
-                                            <a href="#"><span class="material-icons">create</span></a>
-                                        </td>
-                                    </tr>
+                                @endforeach
                                 </tbody>
                             </table>
                     	</div>

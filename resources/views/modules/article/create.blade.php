@@ -19,7 +19,6 @@
                             <div class="english-article">
                                 <h5>English</h5>
                                 <div class="first-row">
-                                    <input type="text" value="100000019" readonly="">
                                     {!! Form::text('title_en',old('title_en'),['placeholder' =>
                                             'Article title']); !!}
                                     {!! Form::text('source_en',old('source_en'),['placeholder' =>
@@ -34,13 +33,12 @@
                             <div class="chinese-article">
                                 <h5>China</h5>
                                 <div class="first-row">
-                                    <input type="text" value="100000019" readonly="">
                                     {!! Form::text('title_cn',old('title_cn'),['placeholder' =>
                                             'Article title']); !!}
                                     {!! Form::text('source_cn',old('source_cn'),['placeholder' =>
                                     'Source']); !!}
                                 </div>
-                                {!! Form::textarea('content_cn',old('content_cn'),['id'=>'eng-article-area','placeholder' =>
+                                {!! Form::textarea('content_cn',old('content_cn'),['id'=>'chi-article-area','placeholder' =>
                                     'Article']); !!}
 
                                 {!! Form::text('note_cn',old('note_cn'),['placeholder' =>
