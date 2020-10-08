@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Article;
-
+use DataTables;
 
 class ArticleController extends Controller
 {
@@ -13,10 +13,32 @@ class ArticleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $articles = Article::all();
-        return view('modules.article.index',['articles' => $articles]);
+
+        if ($request->ajax()) {
+            $data = Article::latest()->get();
+            return Datatables::of($data)
+            ->addColumn('idtitle', function($row){
+                $idtitle = '<a href="'.url('/article/view/'.$row->id).'">'.$row->article_code.'</a><br><a href="'.url('/article/view/'.$row->id).'">'.$row->title_en.'</a>';
+            return $idtitle;
+            })
+            ->addColumn('source', function($row){
+                $source ='<a href="#">'.$row->source_en.'</a></br>
+                <a href="#">'.$row->source_cn.'</a>';
+            return $source;
+            })
+            ->addColumn('action', function($row){
+                $action = '<a href="'.url('/article/delete/'.$row->id).'"><i class="material-icons">close</i></a><a href="'.url('/article/edit/'.$row->id).'"><span class="material-icons">create</span></a>';
+                return $action;
+                
+                })
+                ->rawColumns(['action','source','idtitle'])
+            ->make(true);
+            }
+
+        return view('modules.article.index');
+       // return view('modules.article.index',['articles' => $articles]);
     }
 
     /**
@@ -89,7 +111,8 @@ class ArticleController extends Controller
      */
     public function edit($id)
     {
-        //
+        $articleById = Article::where('id', $id)->first();
+        return view('modules.article..edit', ['article' => $articleById]);
     }
 
     /**
@@ -99,9 +122,19 @@ class ArticleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        $article = Article::find($request->id);
+        $article->title_en = $request->title_en;
+        $article->source_en = $request->source_en;
+        $article->content_en = $request->content_en;
+        $article->note_en = $request->note_en;
+        $article->title_cn = $request->title_cn;
+        $article->source_cn = $request->source_cn;
+        $article->content_cn = $request->content_cn;
+        $article->note_cn = $request->note_cn;
+        $article->save();
+        return redirect()->route('article.index');
     }
 
     /**
@@ -112,6 +145,16 @@ class ArticleController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $article = Article::find($id);
+        $article->delete();
+        return redirect()->route('article.index');
+    }
+
+    public function viewDetails($id)
+    {
+
+        $postByID= Article::where('id', $id)->first();
+
+        return view('modules.article.single',['post' => $postByID]);
     }
 }

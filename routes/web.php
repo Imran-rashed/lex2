@@ -48,10 +48,13 @@ Route::group(['middleware'=>'auth'], function(){
     Route::get('context/create', 'ContextController@create')->name('context.create');
         //Article
     Route::get('articlelist', 'ArticleController@index')->name('article.index');
-    //Route::get('article/{id}', 'ArticleController@single');
+    Route::get('article/view/{id}', 'ArticleController@viewDetails');
     Route::get('article/create', 'ArticleController@create')->name('article.create');
+    Route::get('article/edit/{id}', 'ArticleController@edit');
+    Route::post('article/update', 'ArticleController@update')->name('article.update');
+
     Route::post('article/save', 'ArticleController@store')->name('article.store');
-    
+    Route::get('article/delete/{id}', 'ArticleController@destroy');
 
         //Term
     Route::get('termlist', 'TermController@index')->name('term.index');

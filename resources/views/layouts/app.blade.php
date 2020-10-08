@@ -19,6 +19,7 @@
 <!-- Styles -->
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 <link rel='stylesheet' href="{{ asset('assets/css/bootstrap.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/jquery.dataTables.min.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/dataTables.bootstrap4.min.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/select2.min.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/tagsinput.css') }}">
@@ -38,17 +39,19 @@
 
 <!-- page-wrapper -->
 <!-- Scripts -->
-<script src="{{ asset('js/app.js') }}" defer></script>
+
+<script src="{{ asset('js/app.js') }}"></script>
 <script src="{{asset('assets/js/jquery-3.4.1.min.js')}}"></script>
 <script src="{{asset('assets/js/popper.js')}}"></script>
 <script src="{{asset('assets/js/bootstrap.js')}}"></script>
-<script src="{{asset('assets/js/jquery.dataTables.min.js')}}"></script>
-<script src="{{asset('assets/js/dataTables.bootstrap4.min.js')}}"></script>
+
 <script src="{{asset('assets/js/select2.min.js')}}"></script>
 <script src="{{asset('assets/js/tagsinput.js')}}"></script>
-
+<script src="{{asset('assets/js/jquery.dataTables.min.js')}}"></script>
+<script src="{{asset('assets/js/dataTables.bootstrap4.min.js')}}"></script>
 <script src="https://cdn.tiny.cloud/1/qagffr3pkuv17a8on1afax661irst1hbr4e6tbv888sz91jc/tinymce/5.4.2-90/tinymce.min.js"></script>
 <script src="{{asset('assets/js/script.js')}}"></script>
+@yield('scripts')
 @stack('script')
 </body>
 </html>
