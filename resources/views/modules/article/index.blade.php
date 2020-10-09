@@ -15,7 +15,7 @@
                     	</div>
                     	<div class="main-content article-list">
                             <a href="{{route('article.create')}}" class="new-article-btn"><span class="material-icons">post_add</span>Create New Article</a>
-                    		<table id="articlelist_table" class="table" style="width:100%">
+                    		<table id="article-list" class="table" style="width:100%">
                                 <thead>
                                     <tr>
                                         <th>Article ID & Title</th>
@@ -38,7 +38,7 @@
 @section('scripts')
  <script type="text/javascript">
     $(document).ready(function () {
-        var table = $('#articlelist_table').DataTable({
+        var table = $('#article-list').DataTable({
         processing: true,
         serverSide: true,
         responsive: true,

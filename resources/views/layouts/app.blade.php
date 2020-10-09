@@ -41,9 +41,10 @@
 <!-- Scripts -->
 
 <script src="{{ asset('js/app.js') }}"></script>
-<script src="{{asset('assets/js/jquery-3.4.1.min.js')}}"></script>
+<!-- <script src="{{asset('assets/js/jquery-3.4.1.min.js')}}"></script>
+<script src="{{asset('assets/js/bootstrap.js')}}"></script> -->
 <script src="{{asset('assets/js/popper.js')}}"></script>
-<script src="{{asset('assets/js/bootstrap.js')}}"></script>
+
 
 <script src="{{asset('assets/js/select2.min.js')}}"></script>
 <script src="{{asset('assets/js/tagsinput.js')}}"></script>

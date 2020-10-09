@@ -32,10 +32,10 @@ $('#context-list').DataTable({
     "ordering": false,
     "scrollX": true
 });
-$('#article-list').DataTable({
-    "ordering": false,
-    "scrollX": true
-});
+// $('#article-list').DataTable({
+//     "ordering": false,
+//     "scrollX": true
+// });
 
 $('.search-article-id').select2({
     placeholder: "Search by article id"
